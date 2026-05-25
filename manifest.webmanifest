@@ -1,0 +1,16 @@
+{
+  "name": "Wanaemic Portfolio",
+  "short_name": "Wanaemic",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#040c14",
+  "theme_color": "#7c67ff",
+  "description": "A modern responsive portfolio web app built from the CV add-on strengths.",
+  "icons": [
+    {
+      "src": "profile%20photo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

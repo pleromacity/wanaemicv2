@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Wanaemi is a modern portfolio showcasing product design, front-end engineering, and cloud-ready delivery." />
+  <title>Wanaemi Portfolio</title>
+  <link rel="icon" href="profile%20photo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#home">Wanaemi</a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="button button-secondary" href="#contact">Let's Talk</a>
+    </header>
+
+    <main>
+      <section id="home" class="hero section-glow">
+        <div class="hero-copy">
+          <span class="eyebrow">Digital Product Architect</span>
+          <h1>Building modern web experiences that connect people, products, and growth.</h1>
+          <p>
+            A professional portfolio powered by the strongest achievements from the CV add-on: modern UX design, fast
+            front-end engineering, cloud-native delivery, and product-led results.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">View Work</a>
+            <a class="button button-outline" href="#about">Learn More</a>
+            <a class="button button-secondary" href="Copy of cv.pdf" target="_blank" rel="noreferrer noopener">Download
+              CV</a>
+          </div>
+          <div class="hero-tags">
+            <span>React • JavaScript • TypeScript</span>
+            <span>Design Systems • Performance</span>
+            <span>Enterprise Product Strategy</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card hero-card-photo">
+            <img src="profile%20photo.png" alt="Profile photo" loading="eager" />
+          </div>
+          <div class="hero-card hero-card-highlight">
+            <div class="highlight-label">Featured Strength</div>
+            <h2>Trusted by teams that demand clarity, speed, and quality.</h2>
+            <p>Delivering polished digital products with a strong focus on usability, collaboration, and measurable
+              business value.</p>
+          </div>
+          <div class="hero-card hero-card-gallery">
+            <img src="CNDZ7537.JPG" alt="Project highlight image" />
+            <img src="PPXG3701.JPG" alt="Creative concept image" />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div class="section-header">
+          <span>About</span>
+          <h2>Driven by purpose, polished by precision.</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              I craft ambitious digital experiences that feel effortless and perform beautifully. My portfolio is
+              designed around the most compelling facts from the CV add-on: impactful product delivery, end-to-end
+              execution, and a strong foundation in modern web practices.
+            </p>
+            <p>
+              From concept to launch, I focus on responsive interfaces, accessible design, and strategic storytelling.
+              This portfolio is the delivery mechanism for that vision: bold, dynamic, and ready to scale.
+            </p>
+          </div>
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <strong>Digital product fluency</strong>
+              <span>Expertise in building responsive experiences with seamless UX and polished interaction.</span>
+            </div>
+            <div class="highlight-card">
+              <strong>Modern engineering</strong>
+              <span>Strong command of JavaScript ecosystems, design systems, and performance-first development.</span>
+            </div>
+            <div class="highlight-card">
+              <strong>Strategic impact</strong>
+              <span>Focused on client success, team collaboration, and practical outcomes for every project.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section section-process">
+        <div class="section-header">
+          <span>Process</span>
+          <h2>How I turn strategy into sleek, launch-ready products.</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-step">
+            <span class="step-number">01</span>
+            <h3>Align</h3>
+            <p>Understand the business goals, audience needs, and product vision first.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-number">02</span>
+            <h3>Design</h3>
+            <p>Create polished visual systems and intuitive interactions for every screen.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-number">03</span>
+            <h3>Build</h3>
+            <p>Develop fast, resilient interfaces with modern web technologies and clean structure.</p>
+          </div>
+          <div class="process-step">
+            <span class="step-number">04</span>
+            <h3>Launch</h3>
+            <p>Deploy with certainty, iterate quickly, and keep every experience performing beautifully.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section section-work">
+        <div class="section-header">
+          <span>Work</span>
+          <h2>Selected projects built for clarity and scale.</h2>
+        </div>
+        <div id="projectGrid" class="project-grid"></div>
+      </section>
+
+      <section id="skills" class="section section-skills">
+        <div class="section-header">
+          <span>Skills</span>
+          <h2>Capabilities that consistently move products forward.</h2>
+        </div>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </section>
+
+      <section class="section stats-section">
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span>25+</span>
+            <p>High-impact product releases</p>
+          </article>
+          <article class="stat-card">
+            <span>120%</span>
+            <p>Improvement in user satisfaction for major redesigns</p>
+          </article>
+          <article class="stat-card">
+            <span>100%</span>
+            <p>Responsive delivery on every project plan</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-contact">
+        <div class="section-header">
+          <span>Contact</span>
+          <h2>Ready to turn your next idea into a standout digital product?</h2>
+        </div>
+        <div class="contact-panel">
+          <div class="contact-text">
+            <h3>Partner with a modern portfolio designer and builder.</h3>
+            <p>Whether it's product design, web development, or full-stack delivery, I bring a pragmatic, polished
+              approach that makes every project feel premium.</p>
+            <div class="contact-list">
+              <div><strong>Email</strong><span>hello@wanaemi.dev</span></div>
+              <div><strong>Location</strong><span>Remote / Global</span></div>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="Your email" required />
+            </label>
+            <label>
+              Project brief
+              <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+            </label>
+            <button type="submit" class="button button-primary">Send message</button>
+            <p class="form-feedback" id="formFeedback"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Designed for modern deployment, optimized for performance, and built with the best details from the CV add-on.
+      </p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
