@@ -22,45 +22,38 @@
     ───────────────────────────────────────── */
     :root,
     [data-theme="dark"] {
-      --bg: #0f1117;
-      --bg-surface: #1a1d27;
-      --bg-card: #20232f;
+      --bg:           #0f1117;
+      --bg-surface:   #1a1d27;
+      --bg-card:      #20232f;
       --text-primary: #f0f2f8;
-      --text-muted: #8b90a7;
-      --text-faint: #4a4f63;
-      --border: rgba(255, 255, 255, 0.08);
-      --accent: #6366f1;
-      --accent-light: rgba(99, 102, 241, 0.15);
-      --topbar-bg: rgba(15, 17, 23, 0.92);
-      --toggle-bg: #2a2d3a;
-      --toggle-knob: #6366f1;
-      --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      --text-muted:   #8b90a7;
+      --text-faint:   #4a4f63;
+      --border:       rgba(255,255,255,0.08);
+      --accent:       #6366f1;
+      --accent-light: rgba(99,102,241,0.15);
+      --topbar-bg:    rgba(15,17,23,0.92);
+      --toggle-bg:    #2a2d3a;
+      --toggle-knob:  #6366f1;
+      --shadow:       0 4px 24px rgba(0,0,0,0.4);
     }
 
     [data-theme="light"] {
-      --bg: #f5f6fa;
-      --bg-surface: #ffffff;
-      --bg-card: #eef0f8;
+      --bg:           #f5f6fa;
+      --bg-surface:   #ffffff;
+      --bg-card:      #eef0f8;
       --text-primary: #111827;
-      --text-muted: #4b5563;
-      --text-faint: #9ca3af;
-      --border: rgba(0, 0, 0, 0.08);
-      --accent: #4f46e5;
-      --accent-light: rgba(79, 70, 229, 0.1);
-      --topbar-bg: rgba(245, 246, 250, 0.94);
-      --toggle-bg: #d1d5db;
-      --toggle-knob: #4f46e5;
-      --shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+      --text-muted:   #4b5563;
+      --text-faint:   #9ca3af;
+      --border:       rgba(0,0,0,0.08);
+      --accent:       #4f46e5;
+      --accent-light: rgba(79,70,229,0.1);
+      --topbar-bg:    rgba(245,246,250,0.94);
+      --toggle-bg:    #d1d5db;
+      --toggle-knob:  #4f46e5;
+      --shadow:       0 4px 24px rgba(0,0,0,0.1);
     }
 
-    /* ─────────────────────────────────────────
-       BASE RESETS — apply tokens to everything
-    ───────────────────────────────────────── */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
@@ -73,7 +66,6 @@
       transition: background-color 0.35s ease, color 0.35s ease;
     }
 
-    /* Surfaces & cards */
     .page-shell,
     .hero,
     .section,
@@ -102,7 +94,6 @@
       transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
     }
 
-    /* Topbar */
     .topbar {
       background: var(--topbar-bg) !important;
       border-bottom: 1px solid var(--border) !important;
@@ -110,59 +101,31 @@
       transition: background 0.35s ease, border-color 0.35s ease;
     }
 
-    /* Text colours */
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    h1, h2, h3, h4, h5, h6 {
       color: var(--text-primary) !important;
       transition: color 0.35s ease;
     }
-
-    p,
-    span,
-    li,
-    label,
-    strong {
+    p, span, li, label, strong {
       color: var(--text-muted);
       transition: color 0.35s ease;
     }
-
-    .eyebrow,
-    .section-header>span,
-    .highlight-label,
-    .step-number {
+    .eyebrow, .section-header > span, .highlight-label, .step-number {
       color: var(--accent) !important;
     }
 
-    /* Links */
-    a {
-      color: var(--text-primary);
-      transition: color 0.2s;
-    }
+    a { color: var(--text-primary); transition: color 0.2s; }
+    a:hover { color: var(--accent); }
 
-    a:hover {
-      color: var(--accent);
-    }
-
-    /* Inputs & textarea */
-    input,
-    textarea,
-    select {
+    input, textarea, select {
       background-color: var(--bg-surface) !important;
       color: var(--text-primary) !important;
       border: 1px solid var(--border) !important;
       transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
     }
-
-    input::placeholder,
-    textarea::placeholder {
+    input::placeholder, textarea::placeholder {
       color: var(--text-faint) !important;
     }
 
-    /* Footer */
     .footer {
       background-color: var(--bg-surface) !important;
       border-top: 1px solid var(--border) !important;
@@ -170,9 +133,6 @@
       transition: background-color 0.35s ease;
     }
 
-    /* ─────────────────────────────────────────
-       BRAND / NAV
-    ───────────────────────────────────────── */
     .brand {
       font-weight: 800 !important;
       font-size: 1.25rem !important;
@@ -181,9 +141,7 @@
       color: var(--text-primary) !important;
     }
 
-    /* ─────────────────────────────────────────
-       DARK / LIGHT TOGGLE BUTTON
-    ───────────────────────────────────────── */
+    /* ── TOGGLE ── */
     .theme-toggle {
       display: flex;
       align-items: center;
@@ -195,7 +153,6 @@
       margin-right: 12px;
       flex-shrink: 0;
     }
-
     .theme-toggle .track {
       position: relative;
       width: 46px;
@@ -205,7 +162,6 @@
       transition: background 0.3s ease;
       border: 1px solid var(--border);
     }
-
     .theme-toggle .knob {
       position: absolute;
       top: 3px;
@@ -214,22 +170,17 @@
       height: 18px;
       border-radius: 50%;
       background: var(--toggle-knob);
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease;
+      transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), background 0.3s ease;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 10px;
       line-height: 1;
     }
-
     [data-theme="light"] .theme-toggle .knob {
       transform: translateX(20px);
     }
-
-    .theme-toggle .knob-icon {
-      user-select: none;
-    }
-
+    .theme-toggle .knob-icon { user-select: none; }
     .theme-toggle .toggle-label {
       font-size: 0.78rem;
       font-weight: 600;
@@ -238,21 +189,17 @@
       transition: color 0.3s;
       white-space: nowrap;
     }
-
     .topbar {
       display: flex !important;
       align-items: center !important;
       gap: 8px !important;
     }
 
-    /* ─────────────────────────────────────────
-       IMAGES
-    ───────────────────────────────────────── */
+    /* ── IMAGES ── */
     .hero-card-photo {
       overflow: visible !important;
       padding: 0 !important;
     }
-
     .hero-card-photo img {
       width: 100%;
       height: auto !important;
@@ -262,7 +209,6 @@
       border-radius: inherit;
       display: block;
     }
-
     .hero-card-gallery img {
       width: 100%;
       height: 180px;
@@ -272,46 +218,35 @@
       display: block;
     }
 
-    /* ─────────────────────────────────────────
-       CONTACT LIST
-    ───────────────────────────────────────── */
+    /* ── CONTACT LIST ── */
     .contact-list div {
       display: flex;
       flex-direction: column;
       gap: 2px;
       margin-bottom: 12px;
     }
-
     .contact-list strong {
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       opacity: 0.55;
     }
-
     .contact-list a {
       color: var(--text-primary);
       text-decoration: none;
     }
-
     .contact-list a:hover {
       color: var(--accent);
       text-decoration: underline;
     }
 
-    /* ─────────────────────────────────────────
-       SMOOTH TRANSITIONS
-    ───────────────────────────────────────── */
+    /* ── SMOOTH TRANSITIONS ── */
     * {
       transition-property: background-color, color, border-color, box-shadow;
       transition-duration: 0.3s;
       transition-timing-function: ease;
     }
-
-    img,
-    svg {
-      transition: none;
-    }
+    img, svg { transition: none; }
   </style>
 </head>
 
@@ -327,8 +262,13 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <!-- ── THEME TOGGLE ── -->
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
+      <!-- THEME TOGGLE -->
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle light/dark mode"
+        title="Toggle light/dark mode"
+      >
         <div class="track">
           <div class="knob">
             <span class="knob-icon" id="knobIcon">🌙</span>
@@ -352,8 +292,7 @@
           <div class="hero-actions">
             <a class="button button-primary" href="#work">View Work</a>
             <a class="button button-outline" href="#about">Learn More</a>
-            <a class="button button-secondary" href="Copy of cv.pdf" target="_blank" rel="noreferrer noopener">Download
-              CV</a>
+            <a class="button button-secondary" href="Copy of cv.pdf" target="_blank" rel="noreferrer noopener">Download CV</a>
           </div>
           <div class="hero-tags">
             <span>React • JavaScript • TypeScript</span>
@@ -364,8 +303,12 @@
 
         <div class="hero-visual">
           <div class="hero-card hero-card-photo">
-            <img src="profile%20photo.png" alt="Wanaemi Watson – profile photo" loading="eager"
-              onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=top'" />
+            <img
+              src="profile%20photo.png"
+              alt="Wanaemi Watson – profile photo"
+              loading="eager"
+              onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=top'"
+            />
           </div>
 
           <div class="hero-card hero-card-highlight">
@@ -376,10 +319,8 @@
           </div>
 
           <div class="hero-card hero-card-gallery">
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=360&fit=crop&crop=center"
-              alt="Cloud infrastructure and server technology" />
-            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=360&fit=crop&crop=center"
-              alt="Professional team collaboration workspace" />
+            <img src="CNDZ7537.JPG" alt="Project highlight image" />
+            <img src="PPXG3701.JPG" alt="Creative concept image" />
           </div>
         </div>
       </section>
@@ -452,7 +393,133 @@
           <span>Work</span>
           <h2>Selected projects built for clarity and scale.</h2>
         </div>
-        <div id="projectGrid" class="project-grid"></div>
+        <div id="projectGrid" class="project-grid">
+
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=480&fit=crop&crop=center"
+                alt="Next-Gen Product Launch — design system and UI"
+              />
+            </div>
+            <div class="project-tags-row">
+              <span class="project-tag">Design System</span>
+              <span class="project-tag">Responsive UI</span>
+              <span class="project-tag">Performance</span>
+            </div>
+            <h3 class="project-title">Next-Gen Product Launch</h3>
+            <p class="project-desc">
+              A polished digital product experience focused on user engagement,
+              accessibility, and measurable conversion uplift.
+            </p>
+            
+              class="button button-outline project-cta"
+              href="https://aboutwanaemi.netlify.app/#contact"
+              target="_blank"
+              rel="noreferrer noopener"
+            >Discuss project</a>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=480&fit=crop&crop=center"
+                alt="Customer Growth Dashboard — analytics and data visualisation"
+              />
+            </div>
+            <div class="project-tags-row">
+              <span class="project-tag">Data Visualisation</span>
+              <span class="project-tag">UX Strategy</span>
+              <span class="project-tag">Web App</span>
+            </div>
+            <h3 class="project-title">Customer Growth Dashboard</h3>
+            <p class="project-desc">
+              A modern analytics workspace designed to surface insights clearly
+              for decision-makers and teams.
+            </p>
+            
+              class="button button-outline project-cta"
+              href="https://aboutwanaemi.netlify.app/#contact"
+              target="_blank"
+              rel="noreferrer noopener"
+            >Discuss project</a>
+          </div>
+
+        </div>
+
+        <style>
+          .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+          }
+          .project-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+          }
+          .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+          }
+          .project-img-wrap {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+          }
+          .project-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.4s ease;
+          }
+          .project-card:hover .project-img-wrap img {
+            transform: scale(1.04);
+          }
+          .project-tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            padding: 16px 20px 0;
+          }
+          .project-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--accent) !important;
+            background: var(--accent-light);
+            border-radius: 4px;
+            padding: 3px 8px;
+          }
+          .project-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary) !important;
+            padding: 10px 20px 4px;
+            margin: 0;
+          }
+          .project-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted) !important;
+            padding: 0 20px 16px;
+            line-height: 1.65;
+            flex: 1;
+          }
+          .project-cta {
+            margin: 0 20px 20px;
+            text-align: center;
+            width: calc(100% - 40px);
+          }
+        </style>
       </section>
 
       <section id="skills" class="section section-skills">
@@ -530,8 +597,7 @@
     </main>
 
     <footer class="footer">
-      <p>Designed for modern deployment, optimized for performance, and built with the best details from the CV add-on.
-      </p>
+      <p>Designed for modern deployment, optimized for performance, and built with the best details from the CV add-on.</p>
       <div class="footer-links">
         <a href="#home">Home</a>
         <a href="#work">Work</a>
@@ -544,12 +610,12 @@
 
   <script>
     (function () {
-      const html = document.documentElement;
-      const btn = document.getElementById('themeToggle');
-      const knobIcon = document.getElementById('knobIcon');
+      const html        = document.documentElement;
+      const btn         = document.getElementById('themeToggle');
+      const knobIcon    = document.getElementById('knobIcon');
       const toggleLabel = document.getElementById('toggleLabel');
 
-      const DARK_ICON = '🌙';
+      const DARK_ICON  = '🌙';
       const LIGHT_ICON = '☀️';
 
       function getInitialTheme() {
@@ -561,10 +627,10 @@
       function applyTheme(theme) {
         html.setAttribute('data-theme', theme);
         if (theme === 'light') {
-          knobIcon.textContent = LIGHT_ICON;
+          knobIcon.textContent    = LIGHT_ICON;
           toggleLabel.textContent = 'Light';
         } else {
-          knobIcon.textContent = DARK_ICON;
+          knobIcon.textContent    = DARK_ICON;
           toggleLabel.textContent = 'Dark';
         }
         localStorage.setItem('ww-theme', theme);
